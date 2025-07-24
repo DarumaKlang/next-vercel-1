@@ -3,19 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Background gradient colors */
+  --color-bg-start: theme('colors.bg-start');
+  --color-bg-end: theme('colors.bg-end');
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Gradient circle colors */
+  --color-g1-start: theme('colors.g1-start');
+  --color-g1-end: theme('colors.g1-end');
+  --color-g2-start: theme('colors.g2-start');
+  --color-g2-end: theme('colors.g2-end');
+  --color-g3-start: theme('colors.g3-start');
+  --color-g3-end: theme('colors.g3-end');
+  --color-g4-start: theme('colors.g4-start');
+  --color-g4-end: theme('colors.g4-end');
+
+  /* Add other variables if you want to control them globally */
+  /* --blur-amount: 50px; */
+  /* --opacity-amount: 0.7; */
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Ensure body takes full height and no default margin/padding */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  position: relative; /* Needed for absolute positioning of background */
 }
